@@ -206,8 +206,8 @@ If you encounter any issues or have questions:
 ## 📞 Contact
 
 For support or questions, please contact:
-- Email: support@ckdprediction.com
-- GitHub Issues: [Repository Issues](https://github.com/your-repo/issues)
+- Email: yogendra1703s@gmail.com
+- GitHub Issues: [Repository Issues](https://github.com/saini-yogendra/chronic-kidney-disease-prediction/issues)
 
 ---
 
