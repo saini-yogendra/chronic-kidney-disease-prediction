@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- ------------ HEader Start ----------- -->
+            <div class="header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <div class="logo">
+                                <img src="./build/images/logo.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="nav_menu">
+                                <ul class="">
+                                    <li>
+                                        <a class="navlink active" href="">Our Service</a>
+                                    </li>
+                                    <li>
+                                        <a class="navlink" href="">Benifits</a>
+                                    </li>
+                                    <li>
+                                        <a class="navlink" href="">About Our Project</a>
+                                    </li>
+                                    <li>
+                                        <a class="navlink" href="">About Team</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <a class="btn btn-one" href="">Predict</a>
+                        </div>
+                    </div>
+                     
+
+
+                </div>  
+            </div>
+        <!-- ------------ HEader End ----------- -->
+
+        <!-- ------------- Banner Start ------------>
+        <div class="banner">
+          <div class="content">
+            <h1>Predict</h1>
+            <p>Get Your Report</p>
+          </div>
+        </div>
+
+        <!-- ------------- Banner End ------------>
+
+        <!-- Form Area -->
+
+        <div class="form-area">
+          <div class="container">
+            <form method="POST" , action="{{url_for('index')}}">
+              <div class="input-box "><label for="name">Please Enter Your Name:</label><br>
+                <input class="nume" type="text" id="name" name="name" required>
+              </div>
+              <div class="row">
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="age">Age:</label><br>
+                  <input class="nume" type="number" id="age" name="age" required min="0" max="100">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="bp">Blood Pressure:</label><br>
+                  <input class="nume" type="number" id="bp" name="bp" required min="0" max="190">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="sg">Specific gravity:</label><br>
+                  <input class="nume" type="number" step="0.001" id="sg" name="sg" required min="1.005" max="1.030">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="al">Albumin:</label><br>
+                  <input class="nume" type="number" id="al" name="al" required min="0" max="5">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"> <label for="su">Sugar:</label><br>
+                  <input class="nume" type="number" id="su" name="su" required min="0" max="5">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="rbc">Red Blood Cells:</label><br>
+                  <select class="boxy" id="rbc" name="rbc" required>
+                    <option value="">Select</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Abnormal</option>\
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="pc">Pus Cells:</label><br>
+                  <select class="boxy" id="pc" name="pc" required>
+                    <option value="">Select</option>
+                    <option value="0">Normal</option>
+                    <option value="1">Abnormal</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="pcc">Pus Cell Clumps:</label><br>
+                  <select class="boxy" id="pcc" name="pcc" required>
+                    <option value="">Select</option>
+                    <option value="1">Present</option>
+                    <option value="0">Not Present</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="ba">Bacteria:</label><br>
+                  <select class="boxy" id="ba" name="ba" required>
+                    <option value="">Select</option>
+                    <option value="1">Present</option>
+                    <option value="0">Not Present</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="bgr">Blood Glucose Random:</label><br>
+                  <input class="nume" type="number" id="bgr" name="bgr" required min="0" max="500">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="bu">Blood Urea:</label><br>
+                  <input class="nume" type="number" id="bu" name="bu" required min="0" max="400">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="sc">Serum Creatinine:</label><br>
+                  <input class="nume" type="number" step="0.1" id="sc" name="sc" required min="0" max="80">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="sod">Sodium:</label><br>
+                  <input class="nume" type="number" id="sod" name="sod" required min="0" max="200">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="pot">Potassium:</label><br>
+                  <input class="nume" type="number" step="0.1" id="pot" name="pot" required min="0" max="50">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="hemo">Hemoglobin:</label><br>
+                  <input class="nume" type="number" step="0.1" id="hemo" name="hemo" required min="0" max="20">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="pcv">Packed Cell Volume:</label><br>
+                  <input class="nume" type="number" id="pcv" name="pcv" required min="0" max="60">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="wc">White Blood Cell Count:</label><br>
+                  <input class="nume" type="number" id="wc" name="wc" min="0" required max="30000">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="rc">Red Blood Cell Count:</label><br>
+                  <input class="nume" type="number" step="0.1" id="rc" name="rc" required min="0" max="10">
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="htn">Hypertension:</label><br>
+                  <select class="boxy" id="htn" name="htn" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="dm">Diabetes Mellitus:</label><br>
+                  <select class="boxy" id="dm" name="dm" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="cad">Coronary Artery Disease:</label><br>
+                  <select class="boxy" id="cad" name="cad" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="appet">Appetite:</label><br>
+                  <select class="boxy" id="appet" name="appet" required>
+                    <option value="">Select</option>
+                    <option value="0">Good</option>
+                    <option value="1">Poor</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="pe">Pedal Edema:</label><br>
+                  <select class="boxy" id="pe" name="pe" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+                <div class="input-box col-6 col-md-4 col-lg-3"><label for="ane">Anemia:</label><br>
+                  <select class="boxy" id="ane" name="ane" required>
+                    <option value="">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+              </div>
+              <div class="btn-container">
+                <input type="submit" value='predict' class="predict-btn">
+              </div>
+            </form>
+            <!-- <form action="">
+            <div class="row">
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+              <div class="col-md-4 mt-4">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" class="form-control mt-2" required>
+                </div>
+              </div>
+
+              <div class="col-md-12 mt-4 text-center">
+                  <button class="btn btn-one btn-primary">Submit</button>
+              </div>
+
+            </div>
+          </form> -->
+          </div>
+        </div>
+        
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

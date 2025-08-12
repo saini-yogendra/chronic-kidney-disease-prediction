@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Prediction - Modern Kidney Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="CKD Prediction Logo">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="nav_menu">
+                        <ul>
+                            <li><a class="navlink active" href="#about">About CKD</a></li>
+                            <li><a class="navlink" href="#kidney-care">Kidney Care</a></li>
+                            <li><a class="navlink" href="#causes">Causes</a></li>
+                            <li><a class="navlink" href="#prediction">Prediction</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 text-end">
+                    <a href="#prediction" class="btn btn-primary">Start Prediction</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="heroSection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="content fade-in">
+                        <h1>Chronic Kidney Disease Prediction</h1>
+                        <h3>AI-Powered Early Detection</h3>
+                        <p>Our advanced machine learning model helps detect Chronic Kidney Disease (CKD) at an early stage, enabling timely intervention and better health outcomes. Get your personalized risk assessment today.</p>
+                        <div class="mt-4">
+                            <a href="#prediction" class="btn btn-lg btn-primary me-3">
+                                <i class="fas fa-play me-2"></i>Start Prediction
+                            </a>
+                            <a href="#about" class="btn btn-lg btn-secondary">
+                                <i class="fas fa-info-circle me-2"></i>Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/dna.gif') }}" alt="Medical Animation" class="img-fluid" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CKD Section -->
+    <section class="services" id="about">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="sub-title3">About Chronic Kidney Disease</span>
+                <h2 class="sec-title">Understanding CKD</h2>
+                <p class="text-muted">Chronic Kidney Disease affects millions worldwide. Early detection is crucial for effective treatment.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="title-wrap">
+                            <div class="box-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 class="box-title">Chronic</h3>
+                        </div>
+                        <p class="box-text">A condition that develops slowly over time and can persist for months or years, requiring ongoing management and monitoring.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="title-wrap">
+                            <div class="box-icon">
+                                <i class="fas fa-kidney"></i>
+                            </div>
+                            <h3 class="box-title">Kidney</h3>
+                        </div>
+                        <p class="box-text">Vital organs that filter blood, remove waste products, and maintain fluid and electrolyte balance in the body.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="title-wrap">
+                            <div class="box-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3 class="box-title">Disease</h3>
+                        </div>
+                        <p class="box-text">An abnormal condition that affects kidney function, potentially leading to serious health complications if left untreated.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kidney Care Section -->
+    <section class="detail-section" id="kidney-care">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="slide-up">
+                        <span class="sub-title3">Kidney Care</span>
+                        <h2 class="sec-title">Holistic Approach to Kidney Health</h2>
+                        <p class="mb-4">Effective kidney care involves comprehensive monitoring, lifestyle modifications, and early intervention strategies to maintain optimal kidney function.</p>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5><i class="fas fa-question-circle text-primary me-2"></i>Why is CKD Important?</h5>
+                                <p class="mb-0">CKD is a serious condition affecting over 7.8 million people in India alone. Many remain undiagnosed, making early detection crucial for preventing kidney failure.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h5><i class="fas fa-stethoscope text-primary me-2"></i>How is CKD Diagnosed?</h5>
+                                <p class="mb-0">Diagnosis involves blood tests, urine analysis, and imaging studies to assess kidney function and identify underlying conditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/about_3_11.jpg') }}" alt="Kidney Care" class="img-fluid rounded" style="max-width: 500px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section class="detail-section" id="causes" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="slide-up">
+                        <span class="sub-title3">CKD Causes</span>
+                        <h2 class="sec-title">Understanding Risk Factors</h2>
+                        <p class="mb-4">Chronic Kidney Disease can develop due to various factors. Understanding these risk factors helps in prevention and early detection.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diabetes</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Hypertension</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Glomerulonephritis</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Polycystic Kidney Disease</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Obstructions</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Autoimmune Diseases</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Certain Medications</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Family History</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Age Factor</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Smoking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="100%" height="315" 
+                                src="https://www.youtube.com/embed/aD4R82r5hoY" 
+                                title="CKD Information" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prediction Form Section -->
+    <section class="form-area" id="prediction">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="sub-title3">Prediction</span>
+                <h2 class="sec-title">Get Your CKD Risk Assessment</h2>
+                <p class="text-muted">Fill in your medical test results below to get an AI-powered prediction of your kidney disease risk.</p>
+            </div>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <div class="form-container">
+                <form method="POST" action="{{ url_for('index') }}" id="predictionForm">
+                    <!-- Personal Information -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-user me-2"></i>Personal Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="age" class="form-label">Age *</label>
+                                    <input type="number" class="form-control" id="age" name="age" min="1" max="120" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="gender" class="form-label">Gender *</label>
+                                    <select class="form-select" id="gender" name="gender" required>
+                                        <option value="">Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Basic Tests -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-flask me-2"></i>Basic Laboratory Tests</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="bp" class="form-label">Blood Pressure (mmHg) *</label>
+                                    <input type="number" class="form-control" id="bp" name="bp" min="70" max="200" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="sg" class="form-label">Specific Gravity *</label>
+                                    <input type="number" class="form-control" id="sg" name="sg" step="0.001" min="1.005" max="1.030" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="al" class="form-label">Albumin (0-5) *</label>
+                                    <input type="number" class="form-control" id="al" name="al" min="0" max="5" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="su" class="form-label">Sugar (0-5) *</label>
+                                    <input type="number" class="form-control" id="su" name="su" min="0" max="5" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Urine Analysis -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-microscope me-2"></i>Urine Analysis</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="rbc" class="form-label">Red Blood Cells *</label>
+                                    <select class="form-select" id="rbc" name="rbc" required>
+                                        <option value="">Select</option>
+                                        <option value="0">Normal</option>
+                                        <option value="1">Abnormal</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="pc" class="form-label">Pus Cells *</label>
+                                    <select class="form-select" id="pc" name="pc" required>
+                                        <option value="">Select</option>
+                                        <option value="0">Normal</option>
+                                        <option value="1">Abnormal</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="pcc" class="form-label">Pus Cell Clumps *</label>
+                                    <select class="form-select" id="pcc" name="pcc" required>
+                                        <option value="">Select</option>
+                                        <option value="0">Not Present</option>
+                                        <option value="1">Present</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="ba" class="form-label">Bacteria *</label>
+                                    <select class="form-select" id="ba" name="ba" required>
+                                        <option value="">Select</option>
+                                        <option value="0">Not Present</option>
+                                        <option value="1">Present</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blood Tests -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-tint me-2"></i>Blood Tests</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="bgr" class="form-label">Blood Glucose (mg/dL) *</label>
+                                    <input type="number" class="form-control" id="bgr" name="bgr" min="50" max="500" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="bu" class="form-label">Blood Urea (mg/dL) *</label>
+                                    <input type="number" class="form-control" id="bu" name="bu" min="5" max="200" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="sc" class="form-label">Serum Creatinine (mg/dL) *</label>
+                                    <input type="number" class="form-control" id="sc" name="sc" step="0.1" min="0.5" max="20" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="sod" class="form-label">Sodium (mEq/L) *</label>
+                                    <input type="number" class="form-control" id="sod" name="sod" min="120" max="160" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="pot" class="form-label">Potassium (mEq/L) *</label>
+                                    <input type="number" class="form-control" id="pot" name="pot" step="0.1" min="2.5" max="8" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="hemo" class="form-label">Hemoglobin (g/dL) *</label>
+                                    <input type="number" class="form-control" id="hemo" name="hemo" step="0.1" min="5" max="20" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="pcv" class="form-label">Packed Cell Volume (%) *</label>
+                                    <input type="number" class="form-control" id="pcv" name="pcv" min="20" max="60" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="wc" class="form-label">White Blood Cell Count *</label>
+                                    <input type="number" class="form-control" id="wc" name="wc" min="2000" max="30000" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="rc" class="form-label">Red Blood Cell Count *</label>
+                                    <input type="number" class="form-control" id="rc" name="rc" step="0.1" min="2" max="8" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medical History -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-history me-2"></i>Medical History</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="htn" class="form-label">Hypertension *</label>
+                                    <select class="form-select" id="htn" name="htn" required>
+                                        <option value="">Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="dm" class="form-label">Diabetes Mellitus *</label>
+                                    <select class="form-select" id="dm" name="dm" required>
+                                        <option value="">Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="cad" class="form-label">Coronary Artery Disease *</label>
+                                    <select class="form-select" id="cad" name="cad" required>
+                                        <option value="">Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="appet" class="form-label">Appetite *</label>
+                                    <select class="form-select" id="appet" name="appet" required>
+                                        <option value="">Select</option>
+                                        <option value="0">Good</option>
+                                        <option value="1">Poor</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="pe" class="form-label">Pedal Edema *</label>
+                                    <select class="form-select" id="pe" name="pe" required>
+                                        <option value="">Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="ane" class="form-label">Anemia *</label>
+                                    <select class="form-select" id="ane" name="ane" required>
+                                        <option value="">Select</option>
+                                        <option value="0">No</option>
+                                        <option value="1">Yes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-primary" id="submitBtn">
+                            <i class="fas fa-brain me-2"></i>
+                            <span id="submitText">Get Prediction</span>
+                            <span id="loadingSpinner" class="spinner ms-2 d-none"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>CKD Prediction System</h5>
+                    <p class="text-muted">AI-powered early detection for better health outcomes.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p class="text-muted mb-0">&copy; 2024 CKD Prediction. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
